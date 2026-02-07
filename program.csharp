@@ -1,0 +1,44 @@
+public class program{
+public static double Calculate(int first, int second, string operation)
+    {
+        
+            Console.WriteLine("Enter first number: ");
+            int first = Console.ReadLine;
+            
+            Console.WriteLine("Enter second number: ");
+            int second = Console.ReadLine;
+            
+            Console.WriteLine("Choose an operation (+,-,/,*,%, or = to end");
+            String operation = Console.ReadLine;
+    }
+    public static void Result(int first, int second, String operation)
+    {
+        switch(operation)
+        {
+        case "+":
+            Console.WriteLine(first + second);
+            break;
+      
+        case "-":
+            Console.WriteLine(first - second);
+            break;
+      
+        case "*":
+            Console.WriteLine(first * second);
+            break;
+            
+        case "/":
+            Console.WriteLine(first / second);
+            break;
+            
+        case "%":
+            Console.WriteLine(first % second);
+            break;
+            
+        case "=":
+            Console.WriteLine("Session End");
+            break;
+        }
+    }
+}
+}
