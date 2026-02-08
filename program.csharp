@@ -1,44 +1,41 @@
-public class program{
-public static double Calculate(int first, int second, string operation)
+using System;
+
+public class main
+{
+    public static void Main(string[] args)
     {
-        
-            Console.WriteLine("Enter first number: ");
-            int first = Console.ReadLine;
-            
-            Console.WriteLine("Enter second number: ");
-            int second = Console.ReadLine;
-            
-            Console.WriteLine("Choose an operation (+,-,/,*,%, or = to end");
-            String operation = Console.ReadLine;
-    }
-    public static void Result(int first, int second, String operation)
-    {
-        switch(operation)
+        while(true)
         {
-        case "+":
-            Console.WriteLine(first + second);
-            break;
-      
-        case "-":
-            Console.WriteLine(first - second);
-            break;
-      
-        case "*":
-            Console.WriteLine(first * second);
-            break;
-            
-        case "/":
-            Console.WriteLine(first / second);
-            break;
-            
-        case "%":
-            Console.WriteLine(first % second);
-            break;
-            
-        case "=":
-            Console.WriteLine("Session End");
-            break;
+            Console.WriteLine("Welcome to a simple calculator");
+            Console.WriteLine("Enter the first number: ");
+                int first = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the second number");
+                int second = Convert.ToInt32(Console.ReadLine());
+        
+            Console.WriteLine("Select an operation");
+            Console.WriteLine("+ ,- ,/ ,* ,% ");
+            Console.WriteLine("=(exit)");
+                String operation = Console.ReadLine();
+        
+            if(operation != "+" && operation != "-" && operation != "/" && operation != "*" && operation != "="&& operation != "%" )
+            {
+                Console.WriteLine("Invalid Input!!!!!");
+            }
+            else 
+            {
+                double? result = Calculator.Calculate(first,second,operation);
+                
+                if(result != null) 
+                {
+                    Console.WriteLine("Result: " + result);
+                }
+                  
+                if(operation == "=")
+                {
+                    break;
+                }
+            }
+            Console.WriteLine();
         }
     }
-}
 }
